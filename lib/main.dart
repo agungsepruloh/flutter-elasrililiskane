@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'material_color.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -11,9 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Elasri Lil Iskane',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: white),
       home: const MyHomePage(title: 'Elasri Lil Iskane'),
     );
   }
@@ -31,7 +31,12 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(title),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/icons/icon.png'),
+          ],
+        ),
       ),
     );
   }
