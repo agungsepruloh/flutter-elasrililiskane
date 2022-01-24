@@ -1,7 +1,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.elasri">
+
+    <queries>
+      <!-- Opens https URLs -->
+      <intent>
+        <action android:name="android.intent.action.VIEW" />
+        <data android:scheme="https" />
+      </intent>
+    </queries>
+
    <application
-        android:label="elasri"
+        android:label="ELASRILILISKANE"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"

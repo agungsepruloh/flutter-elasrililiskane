@@ -13,10 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Elasri Lil Iskane',
+      title: 'ELASRILILISKANE',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: white),
-      home: const MyHomePage(title: 'Elasri Lil Iskane'),
+      home: const MyHomePage(title: 'ELASRILILISKANE'),
     );
   }
 }
