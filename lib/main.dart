@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-const String odooUrl = 'http://167.86.81.119:8069';
+const String odooUrl = 'http://clients.elasrililiskane.com:8069';
 
 Future<void> launchOdoo() async {
   await launch(odooUrl);
