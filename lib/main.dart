@@ -13,15 +13,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ELASRILILISKANE',
+      title: 'Elasri Lil Iskane',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: white),
-      home: const MyHomePage(title: 'ELASRILILISKANE'),
+      home: const MyHomePage(title: 'Elasri Lil Iskane'),
     );
   }
 }
 
-const String odooUrl = 'http://clients.elasrililiskane.com:8069';
+const String odooUrl = 'https://demo.odoo.com/';
 
 Future<void> launchOdoo() async {
   await launch(odooUrl);
@@ -39,18 +39,19 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     launchOdoo();
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () => launchOdoo(),
-              child: Image.asset(
-                'assets/icons/splash.png',
-                height: MediaQuery.of(context).size.height / 3.5,
-              ),
-            ),
-          ],
+        child: InkWell(
+          onTap: () => launchOdoo(),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: const [
+              Text('Open in Browser'),
+              SizedBox(width: 8),
+              Icon(Icons.open_in_new),
+            ],
+          ),
         ),
       ),
     );

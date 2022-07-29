@@ -10,7 +10,7 @@
     </queries>
 
    <application
-        android:label="ELASRILILISKANE"
+        android:label="Elasri Lil Iskane"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
